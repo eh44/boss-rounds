@@ -15,6 +15,6 @@ public static class ModHelperData
         "Saving and loading on maps is fully functional, but know that you'll need to have " +
         "the mod still installed when opening saves again for it to work.";
 
-    public const string RepoOwner = "doombubbles";
+    public const string RepoOwner = "eh44";
     public const string RepoName = "boss-rounds";
 }
