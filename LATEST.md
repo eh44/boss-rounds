@@ -1,1 +1,1 @@
-- Fixed issue with bosses' round modifications being too clumped
+- Changed the mod from the original mod owner (doombubbles) to add speed/health functionality
