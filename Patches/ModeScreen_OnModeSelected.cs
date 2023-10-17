@@ -1,11 +1,14 @@
-﻿using BTD_Mod_Helper;
+using BTD_Mod_Helper;
 using BTD_Mod_Helper.Extensions;
 using BTD_Mod_Helper.UI.Modded;
 using HarmonyLib;
 using Il2CppAssets.Scripts.Models.ServerEvents;
+using Il2CppAssets.Scripts.Unity;
 using Il2CppAssets.Scripts.Unity.UI_New.InGame;
 using Il2CppAssets.Scripts.Unity.UI_New.Main.ModeSelect;
-
+using Il2CppAssets.Scripts.Unity.UI_New.Popups;
+using Il2CppSystem;
+using static BossRounds.BossRoundsMod;
 namespace BossRounds.Patches;
 
 /// <summary>
@@ -18,11 +21,21 @@ internal static class ModeScreen_OnModeSelected
     private static void Prefix(string modeType)
     {
         if (!BossRoundSet.Cache.TryGetValue(RoundSetChanger.RoundSetOverride, out var bossRoundset)) return;
-
+        
+         
+        
         var inGameData = InGameData.Editable;
         inGameData.SetupBoss(BossRoundsMod.EventId, bossRoundset.bossType, bossRoundset.elite, false,
             BossGameData.DefaultSpawnRounds, new DailyChallengeModel
-            {
+            {   
+                bloonModifiers =
+                {
+                    bossSpeedMultiplier = BossSpeed,
+                    healthMultipliers =
+                    {
+                      boss = BossHealth
+                    },
+                },
                 difficulty = inGameData.selectedDifficulty,
                 map = inGameData.selectedMap,
                 mode = modeType,
