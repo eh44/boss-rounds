@@ -2,9 +2,9 @@ namespace BossRounds;
 
 public static class ModHelperData
 {
-    public const string WorksOnVersion = "38.0";
-    public const string Version = "1.0.10";
-    public const string Name = "Boss Rounds";
+    public const string WorksOnVersion = "39.0";
+    public const string Version = "1.0";
+    public const string Name = "Boss Rounds With Speed/Health Multipliers";
 
     public const string Description =
         "Adds Round Sets for all Bosses and their Elite versions chooseable in the Round Set Changer, " +
