@@ -10,6 +10,8 @@ public static class ModHelperData
         "Adds Round Sets for all Bosses and their Elite versions chooseable in the Round Set Changer, " +
         "allowing you to play any boss on any map at any time. " +
         "Sandbox also works, allowing you to test Bosses by sending their corresponding rounds.\n\n" +
+        "You can change the health of a boss by pressing f7 and the speed of a boss by pressing f8."
+        "This needs to be done before entering a game.\n\n"
         "You DO NOT receive the usual boss rewards / trophies for playing, " +
         "instead you just get a nice chunk of extra Monkey Money.\n\n" +
         "Saving and loading on maps is fully functional, but know that you'll need to have " +
